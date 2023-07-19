@@ -1,12 +1,39 @@
-.search-form-container{
+.search-form-container {
   background-color: aqua;
+  padding: 1em;
 }
 
+.data-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 2em;
+}
 
+.data-item {
+  background-color: aqua;
+  width: 327px;
+  height: 253px;
+  margin-top: 1em;
+}
 
+.all-data-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 2em;
+}
 
 @media only screen and (min-width: 600px) {
-
-  
-  
+  .data-container,
+  .all-data-container {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media only screen and (min-width: 1024px) {
+  .data-container,
+  .all-data-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

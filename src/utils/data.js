@@ -1,4 +1,4 @@
-[
+export default [
   {
     "id": 1,
     "company": "Scoot",
@@ -131,7 +131,7 @@
     "position": "Remote DevOps Engineer",
     "postedAt": "2d ago",
     "contract": "Part Time",
-    "location": "Japan",
+    "location": "Canada",
     "website": "https://example.com/pod",
     "apply": "https://example.com/pod/apply",
     "description": "Join our dynamic team in developing Pod’s core products and supporting infrastructure. Our software is currently written in Java, VB.Net, React Native, React JS and others. You will help lead new initiatives to build and improve the testing, staging and deployment solutions. You will interact with all development teams, development leadership and our hosting/IT staff to define requirements and goals for the Dev Ops Platform.",

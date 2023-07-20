@@ -3,14 +3,14 @@
   height: 205px;
   margin-top: -20px;
   margin:  -20px auto;
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  margin-bottom: 2em;
 &  .logo-container {
   margin-left: 8.5em;
 }
 
 }
-
-
 
 .job-header-info{
 padding-top: 3em;
@@ -22,8 +22,8 @@ gap: 1em;
 
 
 .company-button {
-  background-color: rgba(255, 255, 255, 0.746);
-  color: #5964e0;
+  background-color: #e2e3f2;
+  color: #5964E0;
   padding: 0.8em;
   font-weight: bold;
   text-decoration: none;
@@ -34,3 +34,48 @@ gap: 1em;
   background-color: #5964e0;
   color: white;
 }
+
+
+.all-job-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 327px;
+  height: 100%;
+  margin: 0em auto;
+  padding-top: 2em;
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+  & span {
+    color: #5964E0;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  & p {
+    color: #6E8098;
+  }
+
+  }
+
+& a {
+  text-decoration: none;
+  justify-content: center;
+  background-color: #5964E0;
+  padding: 0.8em;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  margin-top: 3em;
+}
+}
+
+

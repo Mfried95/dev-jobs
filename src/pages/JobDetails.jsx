@@ -5,7 +5,7 @@ import data from "../utils/data.js";
 
 import Header from "../components/Header.jsx";
 
-import "../styles/jobdetails.css"
+import "../styles/jobdetails.css";
 
 const JobDetails = () => {
   const { id } = useParams();
@@ -27,14 +27,27 @@ const JobDetails = () => {
         </div>
 
         <div className="job-header-info">
-        <span>{job.company}</span>
-        <p>{job.website}</p>
-        <a href={job.website} target="_blank" rel="noopener noreferrer" className="company-button">
-  Company Site
-</a>
+          <span>{job.company}</span>
+          <p>{job.website}</p>
+          <a
+            href={job.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="company-button"
+          >
+            Company Site
+          </a>
         </div>
       </div>
       
+      <div className="all-job-info">
+        <header>
+          <p>{job.postedAt}</p>
+          <h2>{job.position}</h2>
+          <span>{job.location}</span>
+            <a href={job.apply}>Apply Now</a>
+        </header>
+      </div>
     </div>
   );
 };

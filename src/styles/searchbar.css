@@ -10,6 +10,19 @@
   gap: 2em;
 }
 
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-left: 1em;
+}
+
+
+
 .data-item {
   background-color: aqua;
   width: 327px;

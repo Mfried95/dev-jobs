@@ -106,16 +106,19 @@ const Searchbar = () => {
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
             <div key={item.id} className="data-item">
-              <img src={item.logo} alt="" />
+              <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
+            <img src={item.logo} alt="" />
+            </div>
               <p>{item.position}</p>
             </div>
           ))
         ) : (
-          <div className="all-data-container">
+          <div className="data-container">
         {data.map((item) => (
           <div key={item.id} className="data-item">
-            {console.log('img log',item.logo)}
-            <img src={item.logo} alt="" style={{backgroundColor: `${item.logoBackground}`}} />
+            <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
+            <img src={item.logo} alt="" />
+            </div>
               <p>{item.position}</p>
             
           </div>

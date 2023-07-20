@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import "../styles/searchbar.css";
 
+import logo from "/public/assets/logos/blogr.svg"
+
 import data from '../utils/data.js';
+
 
 const Searchbar = () => {
   const [searchParams, setSearchParams] = useState({
@@ -54,6 +57,7 @@ const Searchbar = () => {
         return false;
       }
 
+
       return true;
     });
 
@@ -102,6 +106,7 @@ const Searchbar = () => {
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
             <div key={item.id} className="data-item">
+              <img src={item.logo} alt="" />
               <p>{item.position}</p>
             </div>
           ))
@@ -109,7 +114,10 @@ const Searchbar = () => {
           <div className="all-data-container">
         {data.map((item) => (
           <div key={item.id} className="data-item">
-            <p>{item.position}</p>
+            {console.log('img log',item.logo)}
+            <img src={item.logo} alt="" style={{backgroundColor: `${item.logoBackground}`}} />
+              <p>{item.position}</p>
+            
           </div>
         ))}
       </div>

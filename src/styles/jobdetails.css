@@ -1,0 +1,36 @@
+.job-detail-header {
+  background-color: aqua;
+  width: 327px;
+  height: 205px;
+  margin-top: -20px;
+  margin:  -20px auto;
+  border-radius: 0.3rem;
+&  .logo-container {
+  margin-left: 8.5em;
+}
+
+}
+
+
+.job-header-info{
+padding-top: 3em;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1em;
+}
+
+
+.company-button {
+  background-color: rgba(255, 255, 255, 0.746);
+  color: #5964e0;
+  padding: 0.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+.company-button:hover {
+  background-color: #5964e0;
+  color: white;
+}

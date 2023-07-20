@@ -8,7 +8,7 @@ export default [
     "postedAt": "5h ago",
     "contract": "Full Time",
     "location": "United Kingdom",
-    "website": "https://example.com/scoot",
+    "website": "scoot.com",
     "apply": "https://example.com/scoot/apply",
     "description": "Scoot is looking for a Senior Software Engineer passionate about building approachable, innovative and user-first experiences to join our small but growing Engineering team. You will be responsible for building and maintaining front end functionality across all of Scoot’s applications, fostering a growing team of software engineers, and helping drive and maintain best software patterns and practices in our codebase.",
     "requirements": {

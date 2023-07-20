@@ -5,6 +5,7 @@ import data from "../utils/data.js";
 
 import Header from "../components/Header.jsx";
 
+import "../styles/jobdetails.css"
 
 const JobDetails = () => {
   const { id } = useParams();
@@ -16,12 +17,24 @@ const JobDetails = () => {
 
   return (
     <div>
-      <Header/>
-      {/* Display the job details here */}
-      <h2>{job.position}</h2>
-      <p>{job.company}</p>
-      <p>{job.location}</p>
-      {/* Add other job details you want to display */}
+      <Header />
+      <div className="job-detail-header">
+        <div
+          className="logo-container"
+          style={{ backgroundColor: `${job.logoBackground}` }}
+        >
+          <img src={job.logo} alt="" />
+        </div>
+
+        <div className="job-header-info">
+        <span>{job.company}</span>
+        <p>{job.website}</p>
+        <a href={job.website} target="_blank" rel="noopener noreferrer" className="company-button">
+  Company Site
+</a>
+        </div>
+      </div>
+      
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../styles/searchbar.css";
+import { Link } from 'react-router-dom';
 
 import logo from "/public/assets/logos/blogr.svg"
 
@@ -120,19 +121,17 @@ const Searchbar = () => {
         ) : (
           <div className="data-container">
         {data.map((item) => (
-          <div key={item.id} className="data-item" onClick={() => {
-              console.log('clicked', item.id)
-          }}>
-          <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
-        <img src={item.logo} alt="" />
-        </div>
+          <Link key={item.id} to={`/job/${item.id}`} className="data-item">
+          <div className="logo-container" style={{ backgroundColor: `${item.logoBackground}` }}>
+            <img src={item.logo} alt="" />
+          </div>
           <div className="job-info">
             <span>{item.postedAt}</span>
             <h2>{item.position}</h2>
             <span>{item.company}</span>
           </div>
           <p className='location-title'>{item.location}</p>
-        </div>
+        </Link>
         ))}
       </div>
       

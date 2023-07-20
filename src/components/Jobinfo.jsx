@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import data from "../utils/data.js";
 
 import Header from "../components/Header.jsx";
-
+import Searchbar from "../components/Searchbar.jsx";
 
 const JobDetails = () => {
   const { id } = useParams();
@@ -16,7 +16,6 @@ const JobDetails = () => {
 
   return (
     <div>
-      <Header/>
       {/* Display the job details here */}
       <h2>{job.position}</h2>
       <p>{job.company}</p>

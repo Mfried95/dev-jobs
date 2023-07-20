@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/searchbar.css";
 import { Link } from 'react-router-dom';
-
-import logo from "/public/assets/logos/blogr.svg"
+import search from "../assets/desktop/icon-search.svg"
 
 import data from '../utils/data.js';
 
@@ -76,13 +75,18 @@ const Searchbar = () => {
   return (
     <div>
       <form onSubmit={handleSearch} className='search-form-container'>
+        <div className="mobile-searchbar">
         <input
+        className='title-filter-input'
           type="text"
-          placeholder="Filter by title"
+          placeholder="Filter by title..."
           value={searchParams.search}
           onChange={handleInputChange}
+          
         />
-
+        <button type='submit' onSubmit={handleSearch}><img src={search} alt="" /></button>
+        </div>
+        
         <input
           className='location-form'
           type="text"
@@ -100,23 +104,23 @@ const Searchbar = () => {
         />
         <label htmlFor="fullTime">Full-time</label>
 
-        <button type="submit">Search</button>
+        <button type="submit" className='desktop-tablet-button'>Search</button>
       </form>
 
       <div className="data-container">
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
-            <div key={item.id} className="data-item">
-              <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
-            <img src={item.logo} alt="" />
+            <Link key={item.id} to={`/job/${item.id}`} className="data-item">
+            <div className="logo-container" style={{ backgroundColor: `${item.logoBackground}` }}>
+              <img src={item.logo} alt="" />
             </div>
-              <div className="job-info">
-                <span>{item.postedAt}</span>
-                <h2>{item.position}</h2>
-                <span>{item.company}</span>
-              </div>
-              <p className='location-title'>{item.location}</p>
+            <div className="job-info">
+              <span>{item.postedAt}</span>
+              <h2>{item.position}</h2>
+              <span>{item.company}</span>
             </div>
+            <p className='location-title'>{item.location}</p>
+          </Link>
           ))
         ) : (
           <div className="data-container">

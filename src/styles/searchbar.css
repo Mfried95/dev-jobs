@@ -18,24 +18,46 @@
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  margin-left: 1em;
+  position: absolute;
+  margin-top: -18px;
+  margin-left: 2em;
 }
-
 
 
 .data-item {
   background-color: aqua;
   width: 327px;
-  height: 253px;
+  height: 228px;
   margin-top: 1em;
-}
-
-.all-data-container {
   display: grid;
   justify-content: center;
   margin-top: 1em;
-  gap: 2em;
+  border-radius: 1rem;
 }
+
+
+.job-info{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-top: 3.5em;
+
+  & h2{
+    font-size: 20px;
+  }
+
+  & span {
+    font-size: 16px;
+    color: #6E8098;
+  }
+}
+
+.location-title{
+  font-size: 14px;
+  color: #5964E0;
+  font-weight: bold;
+}
+
 
 @media only screen and (min-width: 600px) {
   .data-container,

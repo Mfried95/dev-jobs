@@ -109,19 +109,30 @@ const Searchbar = () => {
               <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
             <img src={item.logo} alt="" />
             </div>
-              <p>{item.position}</p>
+              <div className="job-info">
+                <span>{item.postedAt}</span>
+                <h2>{item.position}</h2>
+                <span>{item.company}</span>
+              </div>
+              <p className='location-title'>{item.location}</p>
             </div>
           ))
         ) : (
           <div className="data-container">
         {data.map((item) => (
-          <div key={item.id} className="data-item">
-            <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
-            <img src={item.logo} alt="" />
-            </div>
-              <p>{item.position}</p>
-            
+          <div key={item.id} className="data-item" onClick={() => {
+              console.log('clicked', item.id)
+          }}>
+          <div className="logo-container" style={{backgroundColor: `${item.logoBackground}`}}>
+        <img src={item.logo} alt="" />
+        </div>
+          <div className="job-info">
+            <span>{item.postedAt}</span>
+            <h2>{item.position}</h2>
+            <span>{item.company}</span>
           </div>
+          <p className='location-title'>{item.location}</p>
+        </div>
         ))}
       </div>
       

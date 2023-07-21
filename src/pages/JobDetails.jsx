@@ -47,6 +47,17 @@ const JobDetails = () => {
           <span>{job.location}</span>
             <a href={job.apply}>Apply Now</a>
         </header>
+
+      <div className="job-content">
+        {job.description}
+        <h2>Requirements</h2>
+        {job.requirements.content}
+        {job.requirements.items}
+          <h2>What You Will Do</h2>
+          {job.role.content}
+          {job.role.items}
+      </div>
+      <a href={job.apply}>Apply Now</a>
       </div>
     </div>
   );

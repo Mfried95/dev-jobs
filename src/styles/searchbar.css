@@ -4,9 +4,10 @@
 
 .data-container {
   display: grid;
+  margin: auto;
   justify-content: center;
-  margin-top: 1em;
-  gap: 2em;
+  align-items: center;
+
 }
 
 .search-form-container{
@@ -112,17 +113,27 @@
   font-weight: bold;
 }
 
-
+/* Tablet */
 @media only screen and (min-width: 600px) {
-  .data-container,
-  .all-data-container {
+  .data-container {
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Added to ensure container takes full height */
+    max-width: 600px; /* Set a maximum width for tablet view */
+    margin: 0 auto; /* Center horizontally */
+    gap: 2em;
   }
 }
 
+/* Desktop */
 @media only screen and (min-width: 1024px) {
-  .data-container,
-  .all-data-container {
+  .data-container {
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Added to ensure container takes full height */
+    max-width: 1024px; /* Set a maximum width for desktop view */
+    margin: 0 auto; /* Center horizontally */
   }
 }

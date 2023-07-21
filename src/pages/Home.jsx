@@ -5,9 +5,11 @@ import Searchbar from "../components/Searchbar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <Header />
+      <div className="home-search">
       <Searchbar />
+      </div>
     </div>
   );
 };

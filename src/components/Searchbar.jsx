@@ -77,7 +77,7 @@ const Searchbar = () => {
   };
 
   return (
-    <div>
+    <div className="searchbar-container">
       <form onSubmit={handleSearch} className="search-form-container">
         <div className="mobile-searchbar">
           <input

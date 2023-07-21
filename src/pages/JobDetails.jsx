@@ -27,8 +27,10 @@ const JobDetails = () => {
         </div>
 
         <div className="job-header-info">
+          <div className="header-title">
           <span>{job.company}</span>
           <p>{job.website}</p>
+          </div>
           <a
             href={job.website}
             target="_blank"

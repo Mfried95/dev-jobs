@@ -1,7 +1,7 @@
 // JobDetails.js
 import React from "react";
 import { useParams } from "react-router-dom";
-import data from "../utils/data.js";
+import data from "../data/data.js";
 
 import Header from "../components/Header.jsx";
 

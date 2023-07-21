@@ -3,7 +3,7 @@ import "../styles/searchbar.css";
 import { Link } from "react-router-dom";
 import search from "../assets/desktop/icon-search.svg";
 
-import data from "../utils/data.js";
+import data from "../data/data.js";
 
 const Searchbar = () => {
   const [searchParams, setSearchParams] = useState({

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/searchbar.css";
 import { Link } from "react-router-dom";
 import search from "../assets/desktop/icon-search.svg";
-
+import searchBlue from "../assets/desktop/icon-search-blue.svg"
 import data from "../data/data.js";
 
 const Searchbar = () => {
@@ -91,6 +91,17 @@ const Searchbar = () => {
             <img src={search} alt="" />
           </button>
         </div>
+    <div className="desktop-searchbar">
+    <button type="submit" onSubmit={handleSearch}>
+        <img src={searchBlue} alt="" />
+        </button>
+        <input
+            className="title-filter-input"
+            type="text"
+            placeholder="Filter by title..."
+            value={searchParams.search}
+            onChange={handleInputChange}
+          />
 
         <input
           className="location-form"
@@ -112,6 +123,8 @@ const Searchbar = () => {
         <button type="submit" className="desktop-tablet-button">
           Search
         </button>
+</div>
+        
       </form>
 
       <div className="data-container">

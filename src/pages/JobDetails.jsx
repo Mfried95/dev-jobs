@@ -44,9 +44,11 @@ const JobDetails = () => {
 
       <div className="all-job-info">
         <header>
+          <div className="alljob-title">
           <p>{job.postedAt}</p>
           <h2>{job.position}</h2>
           <span>{job.location}</span>
+          </div>
           <a href={job.apply}>Apply Now</a>
         </header>
 

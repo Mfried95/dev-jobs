@@ -1,37 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "../styles/searchbar.css";
-import { Link } from 'react-router-dom';
-import search from "../assets/desktop/icon-search.svg"
+import { Link } from "react-router-dom";
+import search from "../assets/desktop/icon-search.svg";
 
-import data from '../utils/data.js';
-
+import data from "../utils/data.js";
 
 const Searchbar = () => {
   const [searchParams, setSearchParams] = useState({
-    search: '',
+    search: "",
     fullTime: false,
-    location: ''
+    location: "",
   });
   const [filteredData, setFilteredData] = useState([]);
 
   const handleInputChange = (event) => {
     setSearchParams({
       ...searchParams,
-      search: event.target.value
+      search: event.target.value,
     });
   };
 
   const handleCheckboxChange = (event) => {
     setSearchParams({
       ...searchParams,
-      fullTime: event.target.checked
+      fullTime: event.target.checked,
     });
   };
 
   const handleLocationChange = (event) => {
     setSearchParams({
       ...searchParams,
-      location: event.target.value
+      location: event.target.value,
     });
   };
 
@@ -43,12 +42,18 @@ const Searchbar = () => {
       const { search, fullTime, location } = searchParams;
 
       // Check if the item's position contains the search keyword
-      if (search && !item.position.toLowerCase().includes(search.toLowerCase())) {
+      if (
+        search &&
+        !item.position.toLowerCase().includes(search.toLowerCase())
+      ) {
         return false;
       }
 
       // Check if the item's location matches the search location
-      if (location && !item.location.toLowerCase().includes(location.toLowerCase())) {
+      if (
+        location &&
+        !item.location.toLowerCase().includes(location.toLowerCase())
+      ) {
         return false;
       }
 
@@ -56,7 +61,6 @@ const Searchbar = () => {
       if (fullTime && !item.isFullTime) {
         return false;
       }
-
 
       return true;
     });
@@ -66,29 +70,30 @@ const Searchbar = () => {
     setFilteredData(filteredData);
 
     setSearchParams({
-      search: '',
+      search: "",
       fullTime: false,
-      location: ''
+      location: "",
     });
   };
 
   return (
     <div>
-      <form onSubmit={handleSearch} className='search-form-container'>
+      <form onSubmit={handleSearch} className="search-form-container">
         <div className="mobile-searchbar">
-        <input
-        className='title-filter-input'
-          type="text"
-          placeholder="Filter by title..."
-          value={searchParams.search}
-          onChange={handleInputChange}
-          
-        />
-        <button type='submit' onSubmit={handleSearch}><img src={search} alt="" /></button>
+          <input
+            className="title-filter-input"
+            type="text"
+            placeholder="Filter by title..."
+            value={searchParams.search}
+            onChange={handleInputChange}
+          />
+          <button type="submit" onSubmit={handleSearch}>
+            <img src={search} alt="" />
+          </button>
         </div>
-        
+
         <input
-          className='location-form'
+          className="location-form"
           type="text"
           placeholder="Filter by location"
           value={searchParams.location}
@@ -96,7 +101,7 @@ const Searchbar = () => {
         />
 
         <input
-          className='checkbox-form'
+          className="checkbox-form"
           type="checkbox"
           id="fullTime"
           checked={searchParams.fullTime}
@@ -104,41 +109,48 @@ const Searchbar = () => {
         />
         <label htmlFor="fullTime">Full-time</label>
 
-        <button type="submit" className='desktop-tablet-button'>Search</button>
+        <button type="submit" className="desktop-tablet-button">
+          Search
+        </button>
       </form>
 
       <div className="data-container">
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
             <Link key={item.id} to={`/job/${item.id}`} className="data-item">
-            <div className="logo-container" style={{ backgroundColor: `${item.logoBackground}` }}>
-              <img src={item.logo} alt="" />
-            </div>
-            <div className="job-info">
-              <span>{item.postedAt}</span>
-              <h2>{item.position}</h2>
-              <span>{item.company}</span>
-            </div>
-            <p className='location-title'>{item.location}</p>
-          </Link>
+              <div
+                className="logo-container"
+                style={{ backgroundColor: `${item.logoBackground}` }}
+              >
+                <img src={item.logo} alt="" />
+              </div>
+              <div className="job-info">
+                <span>{item.postedAt}</span>
+                <h2>{item.position}</h2>
+                <span>{item.company}</span>
+              </div>
+              <p className="location-title">{item.location}</p>
+            </Link>
           ))
         ) : (
           <div className="data-container">
-        {data.map((item) => (
-          <Link key={item.id} to={`/job/${item.id}`} className="data-item">
-          <div className="logo-container" style={{ backgroundColor: `${item.logoBackground}` }}>
-            <img src={item.logo} alt="" />
+            {data.map((item) => (
+              <Link key={item.id} to={`/job/${item.id}`} className="data-item">
+                <div
+                  className="logo-container"
+                  style={{ backgroundColor: `${item.logoBackground}` }}
+                >
+                  <img src={item.logo} alt="" />
+                </div>
+                <div className="job-info">
+                  <span>{item.postedAt}</span>
+                  <h2>{item.position}</h2>
+                  <span>{item.company}</span>
+                </div>
+                <p className="location-title">{item.location}</p>
+              </Link>
+            ))}
           </div>
-          <div className="job-info">
-            <span>{item.postedAt}</span>
-            <h2>{item.position}</h2>
-            <span>{item.company}</span>
-          </div>
-          <p className='location-title'>{item.location}</p>
-        </Link>
-        ))}
-      </div>
-      
         )}
       </div>
     </div>

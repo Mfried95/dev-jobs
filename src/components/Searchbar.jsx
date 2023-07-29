@@ -79,7 +79,7 @@ const Searchbar = () => {
   return (
     <div className="searchbar-container">
       <form onSubmit={handleSearch} className="search-form-container">
-        /** Mobile-searchbar bar stays hidden if its not in mobile view */
+      { /** Mobile-searchbar bar stays hidden if its not in mobile view */ }
         <div className="mobile-searchbar">
           <input
             className="title-filter-input"

@@ -175,7 +175,19 @@
   outline: none;
  }
 
+ .desktop-tablet-button{
+  margin-left: 2em;
+ }
 
+ label{
+  margin-left: 0.5em;
+ }
+
+ .checkbox-form{
+  width: 20px;
+  height: 15px;
+ }
+ 
 }
 
 /* Desktop */
@@ -190,6 +202,6 @@
   }
 
   .search-form-container{
-    width: 800px;
+    min-width: 850px;
   }
 }

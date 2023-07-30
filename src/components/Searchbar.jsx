@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/searchbar.css";
 import { Link } from "react-router-dom";
 import search from "../assets/desktop/icon-search.svg";

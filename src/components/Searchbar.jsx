@@ -49,7 +49,6 @@ const Searchbar = () => {
         return true;
       }
 
-
       setSearchParams("");
       setFullTime(false);
       setLocation("");

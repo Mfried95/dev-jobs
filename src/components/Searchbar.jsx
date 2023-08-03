@@ -45,9 +45,10 @@ const Searchbar = () => {
       }
 
       // Check if full-time filter is enabled and the item is not full-time
-      if (fullTime && !item.isFullTime) {
-        return false;
+      if (fullTime && !item.contract.toLowerCase().includes("Full Time")) {
+        return true;
       }
+
 
       setSearchParams("");
       setFullTime(false);

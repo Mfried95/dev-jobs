@@ -95,7 +95,7 @@
   flex-direction: column;
   gap: 0.5em;
   padding-top: 3.5em;
-
+  width: 200px;
   & h2{
     font-size: 20px;
     color: black;
@@ -118,6 +118,7 @@
 }
 
 
+
 /* Tablet */
 @media only screen and (min-width: 650px) {
   .data-container {
@@ -136,6 +137,13 @@
   
   .desktop-tablet-button{
     display: block;
+    cursor: pointer;
+  }
+
+  .desktop-tablet-button:hover {
+    background-color: white;
+    color: #5964E0;
+    border: solid 1px black;
   }
 
   .mobile-searchbar{

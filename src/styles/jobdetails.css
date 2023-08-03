@@ -11,6 +11,10 @@
   }
 }
 
+.job-info{
+  width: 200px;
+}
+
 .job-header-info {
   padding-top: 3em;
   display: flex;

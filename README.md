@@ -18,10 +18,5 @@ Welcome to the Jobs Board project! This is a responsive frontend web application
 ![Desktop](./docs/desktop.png)
 
 
-![Mobile](./docs/Mobile.png)
-
-
-![Tablet](./docs/Tablet.png)
-
 
 

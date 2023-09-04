@@ -2,11 +2,12 @@
   background-image: url("../assets/mobile/bg-pattern-header.svg");
   height: 136px;
 
-& h2{
+& h2 a{
   display: flex;
   align-items: center;
   color: white;
   padding: 1em;
+  text-decoration: none;
 }
 
 }

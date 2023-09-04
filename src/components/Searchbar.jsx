@@ -11,6 +11,7 @@ const Searchbar = () => {
   const [location, setLocation] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
+
   const handleSearchChange = (event) => {
     setSearchParams(event.target.value);
   };

@@ -76,6 +76,13 @@
     border-radius: 0.4rem;
     margin-top: 3em;
   }
+
+  & a:hover {
+    background-color: white;
+    border: solid 1px black;
+    color: black;
+}
+
 }
 
 .job-content {
